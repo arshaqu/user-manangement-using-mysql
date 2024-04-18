@@ -1,0 +1,39 @@
+<div style="font-family: 'Times New Roman', Times, serif;" class="row">
+  <div  class="col-6"><h3>USERS</h3></div>
+    <div class="col-6 d-flex justify-content-end">
+      <a href="/adduser" type="button" class="btn btn-outline-secondary align-self-center">+ ADD USER</a>
+    </div>
+    
+</div>
+
+<table style="font-family: 'Courier New', Courier, monospace;" class="table border table-striped table-hover mt-2">
+ <thead>
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col" class="text-end">Action</th>
+    </tr>
+  </thead>
+  <tbody >
+
+    {{#each rows}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.first_name}}</td>
+      <td>{{this.last_name}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.phone}}</td>
+      <td class="text-end">
+        <a href="/edituser/{{this.id}}" type="button" class="btn btn-outline-primary"><i class="bi bi-pencil"></i>EDIT</a>
+        <a href="/{{this.id}}" type="button" class="btn btn-outline-danger"><i class="bi bi-trash"></i>DELETE</a>
+      </td>
+    </tr>
+
+    {{/each}}
+  </tbody>
+</table>
+
+<nav aria-label="...">

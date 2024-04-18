@@ -1,0 +1,12 @@
+<nav style="font-family: 'Times New Roman', Times, serif;" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Edit User</li>
+  </ol>
+</nav>
+
+{{#each rows}}
+<form style="border-radius: 8px; box-shadow: 3px 3px; border-color: gray; font-family: 'Times New Roman', Times, serif; " class="row border g-3 mt-3 needs-validation" method="POST" action="/edituser/{{this.id}}" novalidate>
+{{> userForm}}
+</form>
+{{/each}}
